@@ -1,0 +1,70 @@
+
+<div id="producto">
+<pre>{{closeResult}}</pre>
+
+<div class="px-content">
+  <div class="page-header">
+    <h1><span class="text-muted font-weight-light"><i class="page-header-icon ion-ios-keypad"></i>Listados / </span>Productos</h1>
+  </div>
+  
+  <div class="panel-body" align="right">
+    <div align="right">
+        <button type="button" class="btn btn-outline-light" routerLink="/masproduct"><i class="fa fa-plus-square-o"></i> Añadir Productos</button>
+
+  </div>
+
+    <br>
+  <div class="panel">
+    <div class="panel-heading">
+      <div class="panel-title"></div>
+    </div>
+    <div class="panel-body">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>ID</th>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Marca</th>
+            <th>Presentacion</th>
+            <th></th>
+            <th></th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="odd gradeX" *ngFor="let producto of listaProducto; let i = index">
+            <td tabindex="1">{{ i + 1 }}</td>
+            <td tabindex="1">{{ producto['nombre_producto'] }} </td>
+            <td tabindex="1">{{ producto['precio_producto'] }}</td>
+            <td tabindex="1">{{ producto['marca'] }}</td>
+            <td tabindex="1"> {{ producto['presentacion'] }}</td>
+            <td > <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i></button></td>
+            <td > <button type="button" class="btn btn-info"><i class="fa fa-edit"></i></button></td>
+          </tr>
+        
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+<nav aria-label="...">
+    <ul class="pagination">
+      <li class="page-item disabled">
+        <a class="page-link" href="#" tabindex="-1">Anterior</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item active">
+        <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#">Siguiente</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<br>
+<br>
+</div>
